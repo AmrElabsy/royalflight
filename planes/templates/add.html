@@ -2,5 +2,38 @@
 {% block title %}Add New Plane{% endblock %}
 
 {% block body %}
+    <div class="add-plane">
+    <div class="container">
+        <h1 class="text-center">Add a Plane Form</h1>
+            <div class="form">
+                <div class="container">
+                    <div class="m">
+                        <form action="/planes/addquery" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="text">Plane Name:</label>
+                                <input type="text" class="form-control" placeholder="Enter plane name" name="pln_name">
+                            </div>
+                            <div class="form-group">
+                                <label>Capacity A :</label>
+                                <input type="text" class="form-control" placeholder="Enter capacity" name="capacityA">
+                            </div>
+                            <div class="form-group">
+                                <label>Capacity B :</label>
+                                <input type="text" class="form-control"  placeholder="Enter capacity" name="capacityB">
+                            </div>
+                            <div class="form-group">
+                                <label>Capacity C :</label>
+                                <input type="text" class="form-control" placeholder="Enter capacity" name="capacityC">
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 
 {% endblock %}

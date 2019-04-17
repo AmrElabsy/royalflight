@@ -2,5 +2,39 @@
 {% block title %}Planes{% endblock %}
 
 {% block body %}
+<div class="container">
+	<h1 class="text-center planes-h1">Planes</h1>
+    {% if msg %}
+        {{ msg }}
+    {% endif %}
+	<table class="table table-striped text-center">
+		<thead>
+			<tr>
+				<th>Plane ID</th>
+				<th>Plane Name</th>
+				<th>Capacity of Class A</th>
+				<th>Capacity of Class B</th>
+				<th>Capacity of Class C</th>
+				<th>Manage</th>
+			</tr>
+		</thead>
+		<tbody>
+            {% for plane in planes %}
+                <tr>
+                    <td>{{ plane.0 }}</td>
+                    <td>{{ plane.1 }}</td>
+                    <td>{{ plane.2 }}</td>
+                    <td>{{ plane.3 }}</td>
+                    <td>{{ plane.4 }}</td>
+                    <td>
+                        <a href="/planes/edit/{{ plane.0 }}" class="btn btn-success">Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+		</tbody>
+
+	</table>
+	<a href="/planes/add" class="btn btn-outline-primary">Add a New Plane</a>
+</div>
 
 {% endblock %}
