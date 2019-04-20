@@ -3,4 +3,63 @@
 
 {% block body %}
 
+<!--form-->
+
+<div id="booking" class="section" >
+	<div class="section-center">
+		<div class="container">
+			<div class="row">
+				<div class="pos">
+					<div class ="form-reserve">
+						<span class="form-reserve">Reservation Form</span>
+					</div>
+					<div class="booking-form col-md-offset-8">
+						<form>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-group" > Current City</span>
+										<input class="form-control" type="text" placeholder="ENTER YOUR Current city ">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-group">Your Flight</span>
+										<input class="form-control" type="text" placeholder="Type YOUR FLIGHT ">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-checkbox">
+									<span class="form-label">CLASS</span>
+									<label for="CLASS A">
+										<input type="radio" id="CLASS A" name="flight-type">
+										<span>Class A</span>
+									</label>
+									<label for="CLASS B">
+										<input type="radio" id="CLASS B" name="flight-type">
+										<span>Class B</span>
+									</label>
+									<label for="CLASS C">
+										<input type="radio" id="CLASS C" name="flight-type">
+										<span>Class C</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-btn">
+									<button class="submit-btn" >Start Your Flight</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!--end form-->
 {% endblock %}

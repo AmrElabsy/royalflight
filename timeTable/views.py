@@ -16,7 +16,13 @@ def editquery(request):
 
 
 def gotoadd(request):
-    return render(request, template_name=path + "add.html")
+    stmt = mydb.cursor()
+    stmt.execute("SELECT * FROM planes")
+    result = stmt.fetchall()
+    context = {
+        "planes": result,
+    }
+    return render(request, template_name=path + "add.html", context=context)
 
 
 def addquery(request):

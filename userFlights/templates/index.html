@@ -2,5 +2,38 @@
 {% block title %}Flights{% endblock %}
 
 {% block body %}
-
+    <div class="container page-body">
+        <div class="flights-menu">
+            <ul>
+                <li class="btn btn-success" data-filter="*">All</li>
+                <li class="btn btn-outline-success" data-filter=".dubai">Dubai</li>
+                <li class="btn btn-outline-success" data-filter=".london">London</li>
+                <li class="btn btn-outline-success" data-filter=".paris">Paris</li>
+                <li class="btn btn-outline-success" data-filter=".usa">USA</li>
+            </ul>
+        </div>
+        <div class="flights-item">
+            <div class="item london">
+                This Flight is Going to London
+            </div>
+            <div class="item dubai">
+                This Flight is Going to Dubai
+            </div>
+            <div class="item paris">
+                This Flight is Going to Paris
+            </div>
+            <div class="item dubai">
+                This Flight is Going to Dubai
+            </div>
+            <div class="item usa">
+                This Flight is Going to USA
+            </div>
+            <div class="item london">
+                This Flight is Going to London
+            </div>
+            <div class="item london">
+                This Flight is Going to London
+            </div>
+        </div>
+    </div>
 {% endblock %}

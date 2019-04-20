@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^', include('main.main_urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^planes/', include('planes.planes_ulrs')),
     url(r'^admin-flights/', include('adminFlights.ad_flights_url')),

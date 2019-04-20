@@ -1,3 +1,13 @@
+.page-body
+{
+    margin-top: 15px;
+}
+
+.page-body > *:last-child
+{
+    margin-bottom: 30px;
+}
+
 .navbar-brand
 {
      color: rgba(255, 165, 0, 0.788235294117647);
@@ -7,7 +17,7 @@
 {
     color: rgba(255, 165, 0, 0.788235294117647);
 }
-img
+.navbar-dark img
 {
     width: 35px;
     height: 40px;
@@ -46,7 +56,6 @@ h5
     width: 100%;
     height: auto;
     color:   rgba(255, 255, 255, 0.5);
-    margin-top: 30px;
 }
 
 
@@ -144,7 +153,6 @@ h1
 .m
 {
     width: 470px;
-    height: 660px;
     background: rgba(255,165,0,0.9);
     margin-left: auto;
     margin-right: auto;
@@ -184,6 +192,256 @@ h1
 }
 
 .form button
+{
+    margin-top: 15px !important;
+}
+
+/* End Form */
+
+
+/* Start Flights */
+.flights-menu
+{
+    text-align: center;
+}
+
+.flights-menu ul li:hover
+{
+    cursor: pointer;
+}
+
+/* End Flights */
+
+
+
+/*reservation form*/
+
+
+.section {
+    position: relative;
+    height: 100vh;
+}
+
+.secposition
+{
+    width: auto;
+    padding-right: : 300px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* form image */
+#booking {
+    font-family: gill sans;
+    text-shadow: transparent;
+    background-image: url('6.jpeg');
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: center;
+    /*background-attachment: fixed;*/
+
+}
+/* end of form image */
+
+.form-reserve
+{
+    margin: auto;
+    padding: 10px;
+    background: -webkit-linear-gradient(black,#000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    color:  #424242;
+    font: bold 60px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-shadow: 1px 1px #90A4AE,
+    1px 1px #90A4AE,
+    1px 1px #90A4AE;
+
+    -webkit-transition: all 0.12s ease-out;
+    -moz-transition:    all 0.12s ease-out;
+    -ms-transition:     all 0.12s ease-out;
+    -o-transition:      all 0.12s ease-out;
+    display: block;
+}
+/* div form */
+.booking-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 6px;
+    padding-right: 25px;
+    padding-left: 18px;
+    display: inline-block;
+    margin: 10px auto;
+}
+/* end div*/
+
+.pos
+{
+    position: absolute;
+    right: 10%;
+    text-align: center;
+}
+
+/* div content */
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 49px;
+    margin-top: 7px;
+    color: #EF6C00;
+    /* text-align: left; */
+    padding-left: -7px;
+}
+
+/* end of div content */
+.booking-form .form-control {
+    background-color: #fff;
+    width:330px;
+    color: #191a1e;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 40px;
+    padding: 25px;
+}
+/* for place holders inside the text input*/
+.booking-form .form-control::-webkit-input-placeholder {
+    color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+    color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control::placeholder {
+    color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+    color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* for radio button of classes */
+
+input[type=radio] {
+    box-sizing: border-box;
+    /* padding: 0; */
+    /* padding-right: 3px; */
+    margin-left: 18px;
+}
+
+
+
+
+/* for view flight button */
+
+.booking-form .form-btn {
+    margin-bottom: : 80px;
+    font-family: impact;
+    text-shadow: transparent;
+    flex: 0 0 25%;
+    /* max-width: 47px; */
+    /* width: 33px; */
+    margin-left: -50px;
+    padding-left: 170px;
+}
+
+
+/* submit button design*/
+.booking-form .submit-btn {
+    color: #6D4C41;
+    background: -webkit-linear-gradient(#eee, orange,brown);
+
+    margin-bottom: : 50px;
+    background-color: #FF6D00;
+    font-weight: 400;
+    height: 50px;
+    font-size: 14px;
+    border: none;
+    width: 100px;
+    border-radius: 40px;
+    text-transform: uppercase;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+    opacity: 0.9;
+}
+
+/* end of form */
+
+/* Start Form*/
+
+.form-time
+{
+    margin-top: -48px;
+    margin-bottom: 70px;
+	font-weight: bold;
+	color: #36387a;
+
+}
+
+
+.add-time
+{
+	background: url("me.jpg") no-repeat fixed;
+    background-size: cover;
+    padding-top: 25px;
+    margin-bottom: -29px;
+    height: 1100px;
+}
+
+.add-time h1
+{
+    margin-top: 0;
+}
+
+.time-table
+{
+    background: rgba(255,165,0,0.9);
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-top: 60px;
+    padding: 30px 20px 20px;
+}
+
+.form-time .container button,h2
+{
+	margin-left: 20px;
+	margin-right: 50px;
+}
+
+
+.form-time .container button
+{
+	font-weight: bold;
+}
+
+.form-time label
+{
+    font-size: 20px;
+}
+
+.form-time button
 {
     margin-top: 15px !important;
 }

@@ -2,5 +2,73 @@
 {% block title %}Add new Time{% endblock %}
 
 {% block body %}
+<!--start form-->
+
+<div class="add-time">
+	<div class="container">
+		<h1 class="text-center">Time Table</h1>
+		<div class="form-time">
+			<div class="container">
+				<div class="time-table col-md-6">
+					<form action="/timetable/addquery" method="post">
+						<div class="form-group">
+							<label>Day</label>
+							<select class="form-control" name="plane day" placeholder="sunday">
+								<option>Sunday</option>
+								<option>Monday</option>
+								<option>Tuesday</option>
+								<option>Wednesday</option>
+								<option>Thursday</option>
+								<option>Friday</option>
+								<option>Saturday</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Take off time:</label>
+							<input type="time" class="form-control" placeholder="Enter take off time" name="take off time">
+						</div>
+						<div class="form-group">
+							<label>Arrival time :</label>
+							<input type="time" class="form-control" placeholder="Enter Arrival time" name="arrival time">
+						</div>
+						<div class="form-group">
+							<label>plane name</label>
+							<select class="form-control" name="plane name">
+                                {% for plane in planes %}
+                                    <option value="{{ plane.0 }}">{{ plane.1 }}</option>
+                                {% endfor %}
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Origin :</label>
+							<input type="text" class="form-control" placeholder="Enter Origin" name="origin">
+						</div>
+						<div class="form-group">
+							<label>Destination :</label>
+							<input type="text" class="form-control" placeholder="Enter Destination" name="destination">
+						</div>
+						<div class="form-group">
+							<label>Class A price :</label>
+							<input type="text" class="form-control" placeholder="Enter Class A price" name="Price A">
+						</div>
+						<div class="form-group">
+							<label>Class B price:</label>
+							<input type="text" class="form-control"  placeholder="Enter Class B price" name="price B">
+						</div>
+						<div class="form-group">
+							<label>Class C price:</label>
+							<input type="text" class="form-control" placeholder="Enter Class C price" name="price C">
+						</div>
+							<button type="submit" class="btn btn-dark">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--end form-->
 
 {% endblock %}

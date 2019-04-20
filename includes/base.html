@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 	<div class="container">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="/main">
 			<span>
 				<img class="n" src="{% static 'static/images/globe.svg' %}">
 				<h5>Royal Flight</h5>
@@ -26,10 +26,14 @@
 
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
+                {% if request.session.Admin %}
+                {% elif request.session.client %}
+                {% else %}
+                    <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/timetable">Time Table</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user-flights">Flights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/sign">Sign In</a></li>
+                {% endif %}
 			</ul>
 		</div>
 	</div>
@@ -88,6 +92,7 @@
  <script src="{% static 'static/js/jquery-3.3.1.min.js' %}"></script>
  <script src="{% static 'static/js/bootstrap.js' %}"></script>
  <script src="{% static 'static/js/all.min.js' %}"></script>
+ <script src="{% static 'static/js/isotope.js' %}"></script>
  <script src="{% static 'static/js/script.js' %}"></script>
 </body>
 </html>
