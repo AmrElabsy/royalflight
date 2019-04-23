@@ -2,5 +2,46 @@
 {% block title %}Budget{% endblock %}
 
 {% block body %}
+    <div class="budget-body">
+        <div class="budget-container container text-center">
+        <h1>Statistics And Budget</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="budget-1">
+                        <div>
+                            <span class="info"><i class="fa fa-users"></i> {{ clients }}</span>
+                            <span>Number of Clients</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-3">
+                    <div class="budget-2">
+                        <div>
+                            <span class="info"><i class="fa fa-plane"></i> {{ planes }}</span>
+                            <span>Number of Planes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="budget-3">
+                        <div>
+                            <span class="info"><i class="fa fa-dollar-sign"></i> {{ cost }}</span>
+                            <span>Money Paid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="budget-4">
+                        <div>
+                            <span class="info"><i class="fas fa-plane-departure"></i> {{ flights }}</span>
+                            <span>Number of Flights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

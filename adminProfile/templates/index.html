@@ -2,5 +2,29 @@
 {% block title %}Profile{% endblock %}
 
 {% block body %}
+<!--client form-->
+    <div class="client-body">
+        <div class="client-div">
+            <div class="logo"></div>
+            <!-- your profile word -->
+            <div class ="your">
+                <span class="your-flight">Your Profile</span>
+            </div>
+            <!-- end of word-->
+            <!-- input-->
+            <form id="client-info">
+                <input type="text" name="name" placeholder="YOUR name" readonly value="{{ admin.1 }}">
+                <input type="email" name="email" placeholder="E-mail" readonly value="{{ admin.2}}">
+                <input type="text" name="phone" placeholder="YOUR phone" readonly value="{{ admin.4 }}">
+                <input type="text" name="salary" placeholder="YOUR address" readonly value="{{ admin.5}}">
+                <input type="text" name="role" placeholder="YOUR Credit Number" readonly value="{{ admin.6 }}">
+                <a href="/admin-profile/edit/" class="login-btn"><i class="fa fa-edit"></i> Edit Info</a>
+            </form>
+            <!--end of input -->
+            <!--transaction and edit flight button -->
+        </div>
+    </div>
+        <!-- end of transaction and edit button-->
+        <!-- end client profile-->
 
 {% endblock %}

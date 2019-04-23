@@ -3,4 +3,70 @@
 
 {% block body %}
 
+<div class="add-time">
+	<div class="container">
+		<h1 class="text-center">Time Table</h1>
+		<div class="form-time">
+			<div class="container">
+				<div class="time-table col-md-6">
+					<form action="/timetable/editquery" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ time.0 }}" name="time_id">
+						<div class="form-group">
+							<label>Day</label>
+							<select class="form-control" name="day">
+								<option value="Sunday" {% if time.7 == 'Sunday' %}selected{% endif %}>Sunday</option>
+								<option value="Monday" {% if time.7 == 'Monday' %}selected{% endif %}>Monday</option>
+								<option value="Tuesday" {% if time.7 == 'Tuesday' %}selected{% endif %}>Tuesday</option>
+								<option value="Wednesday" {% if time.7 == 'Wednesday' %}selected{% endif %}>Wednesday</option>
+								<option value="Thursday" {% if time.7 == 'Thursday' %}selected{% endif %}>Thursday</option>
+								<option value="Friday" {% if time.7 == 'Friday' %}selected{% endif %}>Friday</option>
+								<option value="Saturday" {% if time.7 == 'Saturday' %}selected{% endif %}>Saturday</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Take off time:</label>
+							<input type="time" class="form-control" placeholder="Enter take off time" name="starttime" value="{{ time.8 }}">
+						</div>
+						<div class="form-group">
+							<label>Arrival time :</label>
+							<input type="time" class="form-control" placeholder="Enter Arrival time" name="endtime" value="{{ time.9}}">
+						</div>
+						<div class="form-group">
+							<label>plane name</label>
+							<select class="form-control" name="plane">
+                                {% for plane in planes %}
+                                    <option value="{{ plane.0 }}" {% if time.1 == plane.0 %}selected{% endif %}>{{ plane.1 }}</option>
+                                {% endfor %}
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Origin :</label>
+							<input type="text" class="form-control" placeholder="Enter Origin" name="origin" value="{{ time.2 }}">
+						</div>
+						<div class="form-group">
+							<label>Destination :</label>
+							<input type="text" class="form-control" placeholder="Enter Destination" name="destination" value="{{ time.3 }}">
+						</div>
+						<div class="form-group">
+							<label>Class A price :</label>
+							<input type="text" class="form-control" placeholder="Enter Class A price" name="priceA" value="{{ time.4 }}">
+						</div>
+						<div class="form-group">
+							<label>Class B price:</label>
+							<input type="text" class="form-control"  placeholder="Enter Class B price" name="priceB" value="{{ time.5 }}">
+						</div>
+						<div class="form-group">
+							<label>Class C price:</label>
+							<input type="text" class="form-control" placeholder="Enter Class C price" name="priceC" value="{{ time.6 }}">
+						</div>
+							<button type="submit" class="btn btn-dark">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 {% endblock %}

@@ -2,6 +2,47 @@
 {% block title %}Time Table{% endblock %}
 
 {% block body %}
+    <div class="page-body">
+        <div class="container">
+            <h1 class="text-center">Time Table</h1>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Time ID</th>
+                        <th>Plane Name</th>
+                        <th>Destination</th>
+                        <th>Day</th>
+                        <th>Take off Time</th>
+                        <th>Arrival Time</th>
+                        <th>Price A</th>
+                        <th>Price B</th>
+                        <th>Price C</th>
+                        <th>Manage</th>
 
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for time in times %}
+                        <tr>
+                            <th>{{ time.0 }}</th>
+                            <th>{{ time.10 }}</th>
+                            <th>{{ time.3 }}</th>
+                            <th>{{ time.7 }}</th>
+                            <th>{{ time.8 }}</th>
+                            <th>{{ time.9 }}</th>
+                            <th>{{ time.4 }}</th>
+                            <th>{{ time.5 }}</th>
+                            <th>{{ time.6 }}</th>
+                            <td>
+                                <a href="/timetable/edit/{{ time.0 }}" class="btn btn-success"><i class="fa fa-edit"></i> Edit</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+            <a href="/timetable/add" class="btn btn-outline-primary">Add a New Time</a>
+        </div>
+    </div>
 
 {% endblock %}

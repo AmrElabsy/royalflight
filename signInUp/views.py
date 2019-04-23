@@ -11,7 +11,6 @@ def index(request):
 
 def signin(request):
     stmt = mydb.cursor()
-    """
     if request.POST:
         name = request.POST['name']
         pssword = request.POST['password']
@@ -24,12 +23,9 @@ def signin(request):
         else:
             request.session['msg'] = "<div class='alert alert-danger'>Something is Wrong</div>"
         
-        context = {}
-        
-        if request.session['msg']:
-            context['msg'] = request.session['msg']
-            del request.session['msg']
-    """
+
+
+
 
     return render(request, template_name="main/templates/index.html")
 
@@ -53,7 +49,7 @@ def signup(request):
             mydb.commit()
         else:
             request.session['msg'] = "<div class='alert alert-danger'>Two Password don't match</div>"
-    """
+       """
     context = {}
     if request.session['msg']:
         context['msg'] = request.session['msg']
@@ -61,13 +57,38 @@ def signup(request):
 
     return render(request, template_name="main/templates/index.html", context=context)
 
-def logout(request):
-    if request.session['client']:
+def logoutuser(request):
+    if "client" in request.session:
         del request.session['client']
         del request.session['clientid']
 
-    if request.session['Admin']:
+    return render(request, template_name="main/templates/index.html")
+
+
+def logoutadmin(request):
+    if 'Admin' in request.session:
         del request.session['Admin']
         del request.session['Adminid']
+
+    return render(request, template_name="main/templates/index.html")
+
+
+def signinadmin(request):
+
+    return render(request, template_name=path + "admin.html")
+
+
+def loginadmin(request):
+    stmt = mydb.cursor()
+    if request.POST:
+        name = request.POST['name']
+        pas = request.POST['password']
+
+        stmt.execute("SELECT * FROM employee WHERE emp_name = %s AND emp_pass = %s", (name, pas))
+        result = stmt.fetchone()
+        if result:
+            request.session['Admin'] = name
+            request.session['Adminid'] = result[0]
+
 
     return render(request, template_name="main/templates/index.html")

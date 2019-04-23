@@ -3,4 +3,76 @@
 
 {% block body %}
 
+<!--form-->
+
+<div id="booking" class="section" >
+	<div class="section-center">
+		<div class="container">
+			<div class="row">
+				<div class="pos">
+					<div class ="form-reserve">
+						<span class="form-reserve">Reservation Form</span>
+					</div>
+					<div class="booking-form col-md-offset-8">
+						<form method="post" action="/user-profile/editreservationquery">
+                            {% csrf_token %}
+                            <input type="hidden" name="trans_id" value="{{ flight.17 }}">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-group">Current City</span>
+										<input class="form-control" type="text" placeholder="ENTER YOUR Current city" value="{{ flight.9}}" readonly>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-group">Your Flight</span>
+										<input class="form-control" type="text" placeholder="Type YOUR FLIGHT" VALUE="{{ flight.10 }}" readonly>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-checkbox">
+									<span class="form-label">CLASS</span>
+									<label for="CLASS A">
+										<input type="radio" id="radioClassA" name="flightClass" value="classA">
+										<span>Class A</span>
+									</label>
+									<label for="CLASS B">
+										<input type="radio" id="radioClassB" name="flightClass" value="classB">
+										<span>Class B</span>
+									</label>
+									<label for="CLASS C">
+										<input type="radio" id="radioClassC" name="flightClass" value="classC">
+										<span>Class C</span>
+									</label>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<h3 class="form-group col-lg-3" style="display: inline">Price</h3>
+                                        <div class="price-div">
+                                            <input class="form-control" type="text" readonly ID="priceA" value="{{ flight.11 }}" name="priceA">
+                                            <input class="form-control" type="text" readonly ID="priceB" value="{{ flight.12 }}" name="priceB">
+                                            <input class="form-control" type="text" readonly ID="priceC" value="{{ flight.13 }}" name="priceC">
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-btn">
+									<button class="submit-btn" >Edit Your Flight</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

@@ -225,7 +225,7 @@ h1
 .secposition
 {
     width: auto;
-    padding-right: : 300px;
+    padding-right: 300px;
     margin-bottom: 20px;
     margin-top: 60px;
     top: 50%;
@@ -283,13 +283,14 @@ h1
 {
     position: absolute;
     right: 10%;
+    top: 5%;
     text-align: center;
 }
 
 /* div content */
 .booking-form .form-group {
     position: relative;
-    margin-bottom: 49px;
+    margin-bottom: 30px;
     margin-top: 7px;
     color: #EF6C00;
     /* text-align: left; */
@@ -330,6 +331,11 @@ h1
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.booking-form .price-div input
+{
+    display: none;
 }
 
 /* for radio button of classes */
@@ -398,7 +404,10 @@ input[type=radio] {
 	color: #36387a;
 
 }
-
+.time-table
+{
+    background: rgba(255, 165, 0, 0.75);
+}
 
 .add-time
 {
@@ -416,7 +425,6 @@ input[type=radio] {
 
 .time-table
 {
-    background: rgba(255,165,0,0.9);
     margin-left: auto;
     margin-right: auto;
     color: black;
@@ -447,3 +455,600 @@ input[type=radio] {
 }
 
 /* End Form */
+
+/*srart log in page*/
+.sign-page{
+    background-image: url("12.jpeg");
+    background-size: cover;
+    margin-top: -15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+.login-page{
+    max-width: 400px;
+    min-height: 487px;
+    margin: auto;
+    background-color: #8f8fea60;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+}
+.login-page input {
+    margin-bottom: 10px;
+}
+.login-page .selected{
+    color:#504545;
+
+}
+.login-page h1{
+    color: #ad9696;
+    font-family: -webkit-body;
+    font-weight: bold;
+
+}
+.login-page h1 span{
+    cursor: pointer;
+}
+.login-page .signup{
+    display: none;
+}
+
+form.login{
+    margin-top: 50px;
+}
+/*end log in page*/
+
+/* Available Flights */
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .section p {
+    text-align: center;
+    font-size: 6rem;
+    font-family: "Cookie";
+    padding: 10px;
+    margin: 10px;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  .section input {
+    background-color: white;
+    opacity: 10;
+}
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    width: 100%;
+    height: 80vh;
+    opacity: 0.5;
+  }
+
+
+.section
+{
+    background-image: url("../images/turkish.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: -15px;
+}
+
+.section p
+{
+    margin-top: 100px;
+}
+
+.section video
+{
+    display: none;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 800;
+}
+.section .search
+{
+    z-index: 1000;
+}
+.flights-list{
+    padding: 16px;
+    background-color: rgba(130, 150, 240, 0.4);
+    min-height: 550px;
+}
+
+.flights-list img {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+.dropbtn {
+    padding: 16px;
+    height: 230px;
+    border-radius: 40px;
+}
+
+.dropbtn:hover{
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff6e0788;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 30px;
+    padding: 23px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover
+{
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.flights-item .item
+{
+    margin-bottom: 100px;
+    padding: 0;
+}
+
+.flights-item .item:last-child
+{
+    margin-bottom: 300px;
+}
+.flights-item b
+{
+    color: black;
+    font-size: 22px;
+}
+
+.flights-item:hover b
+{
+    text-decoration: none;
+}
+
+.flights-item:hover
+{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* End Available Flights */
+
+
+/* User Profile */
+
+
+  }
+
+  .client-div ::selection {
+    background: rgba(255,255,255,.5);
+    color: #333;
+    height: 100vh;
+  }
+  .client-div ::-moz-selection {
+    background: rgba(0,0,0,.5);
+    color: red;
+  }
+
+
+  .client-body
+  {
+      background-image: url("../images/13.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 120%;
+      margin-top: -20px;
+      padding-top: 40px;
+  }
+  .client-div {
+    position: relative;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 368px;
+    height: 574px;
+     border-radius: 32px;
+     background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    margin-right: 33px;
+    margin-top: 20px;
+    margin-bottom:32px;
+
+  }
+
+  .client-body .header{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(3,3,3,.1);
+  }
+
+  .client-body h1{
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 21px;
+    color: rgba(255,255,255,.5);
+  }
+   /* div container */
+  .client-body .logo{
+    position: relative;
+    top: 30px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+
+
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  /* form */
+
+  .client-body form{
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+  }
+
+
+  /*  style of edit info woed */
+  .client-body input,
+  .client-body .login-btn{
+
+    font-family: impact;
+    position:relative;
+    display: block;
+font-size: 30px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 84%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  /* end of edit info word*/
+   /* style of placeholder*/
+  .client-div input{
+    border: none;
+    border-left: 5px solid;
+    background: none;
+    border-color: #90CAF9;
+    color: #fff;
+    margin-top: 4px;
+    font-weight: 300;
+    font-size: 18px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  /* end of style placeholder*/
+
+  .client-div input:focus{
+    outline: 0;
+    background:#90CAF9;
+    border-radius: 20px;
+    border-color: transparent;
+      color: #000;
+  }
+
+
+  /* style of edit info button */
+  .client-div .login-btn{
+    border-radius: 27px;
+    text-align: center;
+    background-color:#90CAF9;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #000000;
+     margin-top: 16px;
+  }
+
+  /* end of edit info button */
+
+  /* my transaction and edit your flight link*/
+  .client-div .other-options{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  bottom: 2px;
+  left: 0;
+  margin-top: -29px;
+}
+/*  end of my transaction and edit your flight link*/
+
+
+/* button of my transaction and edit */
+  .client-div .option{
+    position: relative;
+    display: block;
+    float: right;
+    width: 100%;
+    height: 30px;
+    bottom: 2px;
+    left: 0;
+    margin-top: -29px;
+    margin: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background:#90CAF9;
+    border-bottom: #90CAF9;
+    cursor: pointer;
+    border-radius: 22px;
+    text-shadow: transparent;
+    width: 100px;
+
+
+  }
+
+  .client-div .option:first-child{
+    float: left;
+    left: 3.3%;
+
+  }
+
+  .client-div .option:last-child{
+    margin-right: 3.3%;
+  }
+  /* transcation and flight word style */
+
+  .client-div .option-text{
+    font-family: impact;
+    position: relative;
+    margin: 0;
+
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 100;
+  }
+
+
+
+  /* Change colors container */
+  .client-div .change-colors-container{
+    position: relative;
+    height: 300px;
+    width: 50px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(255,255,255,.5);
+  }
+
+/* your profile word gradient  */
+  .client-div .your-flight
+  {
+    font-weight: bold;
+
+     font-size: 72px;
+  background: -webkit-linear-gradient(#000000 , black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+ /* your profile style  */
+  .client-div .your
+  {position: absolute;
+    text-shadow: 3px 3px #81D4FA;
+    left: -235%;
+    text-align: center;
+    margin-top: -75px;
+    margin-right: 19px;
+    padding-left: 0;
+  }
+
+  /* end of client profile */
+
+/* End User Profile */
+
+/* Start Budget */
+
+.budget-body
+{
+    height: 250%;
+    background-image: url("../images/cali.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -25px;
+    padding-bottom: 20%;
+}
+
+.budget-container
+{
+    padding-top: 25px;
+}
+
+.budget-container h1
+{
+    margin-top: 50px;
+    padding: 10px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+}
+
+.budget-container > div > div
+{
+    height: 180px;
+    padding: 10px;
+}
+
+.budget-container > div > div > div
+{
+    height: 100%;
+    padding: 25px;
+    border-radius: 50px 0;
+    opacity:  0.8;
+}
+
+.budget-container .budget-1
+{
+    background: 	#ff3300;
+}
+
+
+.budget-container .budget-2
+{
+    background:  #ff471a;
+}
+
+.budget-container .budget-3
+{
+    background:  #ff3300;
+}
+
+.budget-container .budget-4
+{
+    background: #ff704d;
+}
+
+.budget-container span.info
+{
+    display: block;
+    font-size: 36px;
+}
+
+/* End Budget */
+
+
+/* Start Main Page */
+
+.page-main .header
+{
+    background-image: url("../images/new.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+}
+
+.page-main .header .royal-flight
+{
+    position: absolute;
+    width: 70%;
+    margin: 80px 15%;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 60px;
+    padding: 70px;
+}
+
+.page-main .features
+{
+    padding: 60px 0;
+}
+
+.page-main .features .fonta
+{
+    color: #0A0;
+    font-size: 104px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.page-main .flights
+{
+    background-image: url("../images/espan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 420px;
+    position: relative;
+}
+
+.page-main .flights .destinations
+{
+    position: absolute;
+    width: 70%;
+    margin: 80px 15%;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 60px;
+    padding: 70px;
+}
+
+.page-main .destinations-cities .flights-list
+{
+    background: none;
+}
+
+.page-main .destinations-cities .flights-list img
+{
+    width: 200px;
+    height: 200px;
+    margin: 15px 0;
+}
+
+.page-main .signupnow
+{
+    background-image: url("../images/maldives.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 420px;
+    position: relative;
+}
+
+.page-main .signupnow .signup
+{
+    position: absolute;
+    width: 70%;
+    margin: 80px 15%;
+    min-height: 200px;
+    background: rgba(240, 240, 240, 0.6);
+    border-radius: 60px;
+    padding: 70px;
+}
+
+/* End Main Page */

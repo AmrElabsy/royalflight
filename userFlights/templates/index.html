@@ -1,39 +1,71 @@
 {% extends 'includes/base.html' %}
+{% load staticfiles %}
 {% block title %}Flights{% endblock %}
 
 {% block body %}
-    <div class="container page-body">
-        <div class="flights-menu">
-            <ul>
-                <li class="btn btn-success" data-filter="*">All</li>
-                <li class="btn btn-outline-success" data-filter=".dubai">Dubai</li>
-                <li class="btn btn-outline-success" data-filter=".london">London</li>
-                <li class="btn btn-outline-success" data-filter=".paris">Paris</li>
-                <li class="btn btn-outline-success" data-filter=".usa">USA</li>
-            </ul>
-        </div>
-        <div class="flights-item">
-            <div class="item london">
-                This Flight is Going to London
-            </div>
-            <div class="item dubai">
-                This Flight is Going to Dubai
-            </div>
-            <div class="item paris">
-                This Flight is Going to Paris
-            </div>
-            <div class="item dubai">
-                This Flight is Going to Dubai
-            </div>
-            <div class="item usa">
-                This Flight is Going to USA
-            </div>
-            <div class="item london">
-                This Flight is Going to London
-            </div>
-            <div class="item london">
-                This Flight is Going to London
+    <div class="page-body" style="margin-bottom: -30px">
+    <div class="section flights-main">
+    <div class="video-container">
+        <p>Find your Royal destination</p>
+        <!-- <div class="color-overlay"></div> -->
+        <div class="search">
+            <div class="flights-menu">
+                <ul>
+                    <li class="btn btn-primary" data-filter="*">All</li>
+                    <li class="btn btn-outline-primary" data-filter=".Dubai">Dubai</li>
+                    <li class="btn btn-outline-primary" data-filter=".London">London</li>
+                    <li class="btn btn-outline-primary" data-filter=".Paris">Paris</li>
+                    <li class="btn btn-outline-primary" data-filter=".USA">USA</li>
+                    <li class="btn btn-outline-primary" data-filter=".Turkey">Turkey</li>
+                </ul>
             </div>
         </div>
+    </div>
+  </div>
+  <!--vedioooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+        <div class="flights-list flights-item row text-center">
+            {% for flight in flights %}
+                <div class="item {{ flight.7 }} col-lg-3">
+                    <div class="dropdown">
+                        <div class="dropbtn">
+                            <b>{{ flight.7 }}</b>
+                            <br>
+                            <img src="{% static 'static/images/'%}{{ flight.7 }}.jpg" class="rounded-circle" alt="{{ flight.7 }}">
+                        </div>
+                        <div class="dropdown-content">
+                            ON: {{ flight.2 }}
+                            <hr />
+                            At: {{ flight.8 }}
+                            <hr />
+                            Arrives At: {{ flight.9 }}
+                            <hr>
+                            {% if request.session.client %}
+                                <a href="/user-flights/reserve/{{ flight.0 }}">Reserve</a>
+                            {% else %}
+                                <a href="/sign">Reserve</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+    <!--
+    <pre>
+        {% for flight in flights %}
+            {{ flight.0 }}
+            {{ flight.1 }}
+            {{ flight.2 }}
+            {{ flight.3 }}
+            {{ flight.4 }}
+            {{ flight.5 }}
+            {{ flight.6 }}
+            {{ flight.7 }}
+            {{ flight.8 }}
+            {{ flight.9 }}
+        {% endfor %}
+    </pre>
+    -->
     </div>
 {% endblock %}

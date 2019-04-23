@@ -1,7 +1,105 @@
 {% extends 'includes/base.html' %}
+{% load staticfiles %}
 {% block title %}Royal Flight{% endblock %}
 
 {% block body %}
-    Name is:
-{{ request.session.username }}
+    <div class="page-main">
+        <div class="header">
+            <div class="royal-flight text-center">
+                <h1><i class="fa fa-crown"></i> Royal Flight <i class="fa fa-crown"></i></h1>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="fonta"><i class="fa fa-crown"></i></span>
+                        Royal Flight Serveses You as A king and Queen.
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fonta"><i class="fa fa-history"></i></span>
+                        Royal Flight Believes in Time. We don't Waste Your Time
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fonta"><i class="fa fa-user-shield"></i></span>
+                        Your Safety and Your Family Safety is Our First Priority
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fonta"><i class="fa fa-money-bill"></i></span>
+                        Save Your Money, We Offer you The Best Prices
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flights">
+            <div class="destinations text-center">
+                <h1><i class="fas fa-plane-departure"></i> Our Main Destinations <i class="fas fa-plane-departure"></i></h1>
+            </div>
+        </div>
+        <div class="destinations-cities">
+            <div class="container text-center">
+                <div class="row flights-list">
+                    <div class="col-lg-3">
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                                <b>London</b>
+                                <br>
+                                <img src="{% static 'static/images/London.jpg'%}" class="rounded-circle" alt="London">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                                <b>Paris</b>
+                                <br>
+                                <img src="{% static 'static/images/paris.jpg'%}" class="rounded-circle" alt="Paris">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                                <b>USA</b>
+                                <br>
+                                <img src="{% static 'static/images/USA.jpg'%}" class="rounded-circle" alt="USA">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                                <b>Dubai</b>
+                                <br>
+                                <img src="{% static 'static/images/Dubai.jpg'%}" class="rounded-circle" alt="Dubai">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="dropdown">
+                            <div class="dropbtn">
+                                <b>Turkey</b>
+                                <br>
+                                <img src="{% static 'static/images/turkey.jpg'%}" class="rounded-circle" alt="Turkey">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="signupnow">
+            <div class="signup text-center">
+                <h1>Sign Up Now And Reserve Your Royal Flight</h1>
+                <a href="/sign" class="btn btn-outline-primary btn-lg">Sign Up</a>
+
+            </div>
+
+        </div>
+    </div>
+
 {% endblock %}

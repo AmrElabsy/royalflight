@@ -3,4 +3,31 @@
 
 {% block body %}
 
+    <div class="client-body">
+        <div class="client-div">
+            <div class="logo"></div>
+            <!-- your profile word -->
+            <div class ="your">
+                <span class="your-flight">Your Profile</span>
+            </div>
+            <!-- end of word-->
+            <!-- input-->
+            <form id="client-info" method="post" action="/user-profile/editquery">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="YOUR name" value="{{ client.1 }}">
+                <input type="email" name="email" placeholder="E-mail" value="{{ client.2}}">
+                <input type="password" name="pass" placeholder="E-mail" value="{{ client.3}}">
+                <input type="text" name="phone" placeholder="YOUR phone" value="{{ client.4 }}">
+                <input type="text" name="address" placeholder="YOUR address" value="{{ client.5}}">
+                <input type="text" name="Credit" placeholder="YOUR Credit Number" value="{{ client.6 }}">
+                <input type="submit" class="login-btn" value="Confirm Editing">
+            </form>
+            <!--end of input -->
+            <!--transaction and edit flight button -->
+
+        </div>
+    </div>
+    <!-- end of transaction and edit button-->
+    <!-- end client profile-->
+
 {% endblock %}
