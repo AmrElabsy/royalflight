@@ -13,7 +13,7 @@
 * Frameworks & Librariies: Bootstrap, jQuery, isotope & fontawsome
 
 ## Time:-
-~ 20 Hours For Implementation for ~ 2 weeks
+~ 20 Hours For Implementation for ~ 2 weeks, Ended On: 23rd April 2019
 
 ## Team:-
 1. Amr El-Absy (Team Leader & Full Stack Developer)
